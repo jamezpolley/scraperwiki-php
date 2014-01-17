@@ -30,7 +30,7 @@ Save data into a SQLite database (created automatically in the background).
 
 `$data` (required) should either be a single row to save (as an `array()` of strings and/or numbers), or a list of multiple rows to save in one go (as an `array()` of `array()`s)
 
-`$table_name` is optional. If unspecified, the default of `"swdata"` will be used. You can pass any string you like here to save your data into a new table name.
+`$table_name` is optional. If unspecified, the default of `"data"` will be used. You can pass any string you like here to save your data into a new table name.
 
 #### scraperwiki:save_var($name, $value)
 

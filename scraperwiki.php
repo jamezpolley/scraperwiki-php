@@ -12,7 +12,7 @@ class scraperwiki {
 
 protected $db;
 
-public function __construct($db = 'sqlite:scraperwiki.sqlite') {
+public function __construct($db = 'sqlite:data.sqlite') {
 	// connect
 	scraperwiki::_connect($db);	
 }
@@ -28,7 +28,7 @@ static function _connect($db = null) {
 }
 
 
-static function save($unique_keys = array(), $data, $table_name="swdata", $date = null) {
+static function save($unique_keys = array(), $data, $table_name="data", $date = null) {
    $ldata = $data;   
    if (!is_null($date))
       $ldata["date"] = $date; 
@@ -38,7 +38,7 @@ static function save($unique_keys = array(), $data, $table_name="swdata", $date 
 
 // A port of scraperwiki::save_sqlite from classic using RedbeanPHP
 
-static function	save_sqlite($unique_keys = array(), $data, $table_name='swdata') {
+static function	save_sqlite($unique_keys = array(), $data, $table_name='data') {
 
     if (count($data) == 0)
         return;
